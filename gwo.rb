@@ -89,4 +89,4 @@ def gwo(agents, iterations, search_space)
     }
 end
 
-gwo(100, 100, [Array::new(30, -100.0), Array::new(30, 100.0)]);
+gwo(100, 100, [Array::new(30, -100.0), Array::new(30, 100.0)])
