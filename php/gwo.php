@@ -51,26 +51,6 @@ function updateWolfpack(Array $leaders, Array $wolfpack, float $a)
                 $x[] = ($leader[$j] - ($a1 * $dist));
             }
             $wolfpack[$i][$j] = array_sum($x) / 3;
-
-            // // Update with respect to alpha
-            // $a1 = 2 * $a * lcg_value() - $a;
-            // $c1 = 2 * lcg_value();
-            // $dist_alpha = abs($c1 * $leaders[0][$j] - $wolfpack[$i][$j]);
-            // $x1 = ($leaders[0][$j] - ($a1 * $dist_alpha));
-            //
-            // // Update with respect to beta
-            // $a1 = 2 * $a * lcg_value() - $a;
-            // $c1 = 2 * lcg_value();
-            // $dist_beta = abs($c1 * $leaders[1][$j] - $wolfpack[$i][$j]);
-            // $x2 = ($leaders[0][$j] - ($a1 * $dist_beta));
-            //
-            // // Update with respect to delta
-            // $a1 = 2 * $a * lcg_value() - $a;
-            // $c1 = 2 * lcg_value();
-            // $dist_delta = abs($c1 * $leaders[2][$j] - $wolfpack[$i][$j]);
-            // $x3 = ($leaders[0][$j] - ($a1 * $dist_delta));
-            //
-            // $wolfpack[$i][$j] = ($x1 + $x2 + $x3) / 3;
         }
     }
 
@@ -81,8 +61,6 @@ function gwo(int $agents, int $iterations, Array $search_space)
 {
     $alpha_position = $beta_position =  $delta_position = null;
     $alpha_score = $beta_score = $delta_score = PHP_INT_MAX;
-    // $beta_position = null; $beta_score = PHP_INT_MAX;
-    // $delta_position = null; $delta_score = PHP_INT_MAX;
 
     $dimensions = size($search_space, 2);
 
