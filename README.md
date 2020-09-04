@@ -1,6 +1,6 @@
 <h1>Grey Wolf Optimizer Algorithm</h1>
 
-made in the following programming languages:
+Algorithm was coded in the following programming languages:
 <ul>
   <li>PHP</li>
   <li>Ruby</li>
